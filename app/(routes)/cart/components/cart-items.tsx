@@ -5,14 +5,12 @@ import { formatPrice } from "@/lib/formatPrice";
 import { cn } from "@/lib/utils";
 import { ProductType } from "@/types/product";
 import { X } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 interface CartItemProps {
   product: ProductType
 }
 const CartItem = (props: CartItemProps) => {
   const { product } = props
-  const router = useRouter()
   const { removeItem } = useCart()
   return (
     <li className="flex py-6 border-b">

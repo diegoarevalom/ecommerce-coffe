@@ -9,7 +9,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import { makePaymentRequest } from "@/api/payment"
 
 export default function Page() {
-  const { items, removeAll } = useCart()
+  const { items } = useCart()
 
   const prices = items.map((product => product.price))
   const totalPrice = prices.reduce((total, price) => total + price, 0)

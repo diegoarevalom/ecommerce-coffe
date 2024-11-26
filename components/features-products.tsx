@@ -27,7 +27,7 @@ const FeaturesProducts = () => {
           {loading && <SkeletonSchema grid={3} />}
           {result !== null &&
             result.map((product: ProductType) => {
-              const { slug, images, productName, taste, origin, id } = product;
+              const { slug, images, productName, taste, id } = product;
               const thumbnailUrl =
                 images[0]?.formats?.thumbnail?.url;
 
